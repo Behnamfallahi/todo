@@ -17,3 +17,14 @@ let list = document.querySelector("#to_do_list");
     }
      
   })
+  add.addEventListener("click", (e)=>{
+    e.preventDefault();
+    if(!input.value.trim()) {
+     return;
+    }
+    if(document.querySelector("#emptyMsg")) {
+    document.querySelector("#emptyMsg").remove()
+    }
+    list.append(createlistItem(input.value))
+    input.value = "";
+ })
