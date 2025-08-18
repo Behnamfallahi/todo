@@ -28,3 +28,19 @@ let list = document.querySelector("#to_do_list");
     list.append(createlistItem(input.value))
     input.value = "";
  })
+ function createlistItem(itemValue) {
+    let item = document.createElement("li")
+    let title = document.createElement("span")
+    let btn = document.createElement("span")
+
+    item.className = "to_do_item"
+    title.className = " title"
+    title.innerText = itemValue
+
+    btn.className = "delete_btn"
+    btn.innerText = "delete"
+
+    item.appendChild(title)
+    item.appendChild(btn)
+    return item
+ }
