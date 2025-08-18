@@ -2,3 +2,18 @@ let list = document.querySelector("#to_do_list");
  let input =  document.querySelector("#input_add_todo input");
  let add = document.querySelector("#input_add_todo button");
 
+
+ list.addEventListener("click" , (e)=>{
+    if(e.target.nodeName == "SPAN" && e.target.className == "delete_btn" ) {
+    e.target.parentNode.remove()
+    if(list.children.length == 0){
+     let listMassage =  document.createElement("div");
+     listMassage.style.textAlign = "center"
+     listMassage.style.color = "#333"
+     listMassage.innerText = "your list is empty"
+     listMassage.id= "emptyMsg"
+     list.appendChild(listMassage)
+    }
+    }
+     
+  })
