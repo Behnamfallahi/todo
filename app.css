@@ -1,0 +1,28 @@
+.container {
+    max-width: 300px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: #397abb;
+}
+
+
+.title {
+    color: #74b9ff;
+}
+.delete_btn {
+    background-color: #74b9ff;
+    border-radius: 4px;
+}
+
+.add_btn {
+    background-color: #74b9ff;
+    border-radius: 4px; 
+}
+.input_add_todo {
+    width: 200px;
+}
